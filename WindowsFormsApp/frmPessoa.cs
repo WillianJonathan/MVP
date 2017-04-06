@@ -14,7 +14,7 @@ namespace WindowsFormsApp
     {
 
         private Core.Repository.Pessoa.PessoaRepository _pessoaRepository = new Core.Repository.Pessoa.PessoaRepository();
-        private Core.Model.Pessoa.Pessoa _pessoa = new Core.Model.Pessoa.Pessoa();
+        private Core.Model.Pessoa.PessoaModel _pessoa = new Core.Model.Pessoa.PessoaModel();
 
         public frmPessoa()
         {
@@ -33,7 +33,7 @@ namespace WindowsFormsApp
             if (!string.IsNullOrEmpty(txtId.Text.Trim()))
                 id = Convert.ToInt32(txtId.Text);
 
-            var pessoa = new Core.Model.Pessoa.Pessoa()
+            var pessoa = new Core.Model.Pessoa.PessoaModel()
             {
                 Id = id,
                 Codigo = txtCodigo.Text,
@@ -60,7 +60,7 @@ namespace WindowsFormsApp
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             _pessoaRepository.Remove(_pessoa);
-            _pessoa = new Core.Model.Pessoa.Pessoa();
+            _pessoa = new Core.Model.Pessoa.PessoaModel();
             CarregarGrid();
         }
 

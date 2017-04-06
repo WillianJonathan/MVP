@@ -13,7 +13,7 @@ namespace Core.Model.Operacao
         public string Codigo { get; set; }
         public DateTime DataHoraOperacao { get; set; }
         public List<OperacaoItem> Items { get; set; }
-        public Pessoa.Pessoa Cliente { get; set; }
+        public Pessoa.PessoaModel Cliente { get; set; }
     }
 
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Model.Pessoa
 {
-    public class Pessoa
+    public class PessoaModel
     {
         public int Id { get; set; }
         public string Codigo { get; set; }

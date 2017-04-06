@@ -77,8 +77,8 @@ namespace WindowsFormsApp
         private async void btnLimpar_Click(object sender, EventArgs e)
         {
             var b = BCrypt.Net.BCrypt.GenerateSalt(13, BCrypt.Net.SaltRevision.Revision2B);
-            var c = BCrypt.Net.BCrypt.HashPassword("w@45840870@w", b);
-            var a = await Verficar("w@45840870@w", c);
+            var c = BCrypt.Net.BCrypt.HashPassword("123", b);
+            var a = await Verficar("123", c);
             lblResultado.Text = a ? "Válido" : "Incorreto";
         }
     }

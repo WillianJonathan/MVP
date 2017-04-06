@@ -13,7 +13,7 @@ namespace Core.Repository.Pessoa
     public class PessoaRepository : IPessoaRepository
     {
 
-        public void Add(Model.Pessoa.Pessoa item)
+        public void Add(Model.Pessoa.PessoaModel item)
         {
             SqlConnection connection = new SqlConnection();
 
@@ -72,12 +72,12 @@ namespace Core.Repository.Pessoa
             }
         }
 
-        public Model.Pessoa.Pessoa Get(int Id)
+        public Model.Pessoa.PessoaModel Get(int Id)
         {
             if (Id <= 0)
                 throw new ArgumentException("Valor de Id inválido");
 
-            Model.Pessoa.Pessoa pessoa = new Model.Pessoa.Pessoa();
+            Model.Pessoa.PessoaModel pessoa = new Model.Pessoa.PessoaModel();
             SqlConnection connection = new SqlConnection();
 
             try
@@ -130,9 +130,9 @@ namespace Core.Repository.Pessoa
             }
         }
 
-        public List<Model.Pessoa.Pessoa> GetAll()
+        public List<Model.Pessoa.PessoaModel> GetAll()
         {
-            List<Model.Pessoa.Pessoa> pessoas = new List<Model.Pessoa.Pessoa>();
+            List<Model.Pessoa.PessoaModel> pessoas = new List<Model.Pessoa.PessoaModel>();
             SqlConnection connection = new SqlConnection();
 
             try
@@ -154,7 +154,7 @@ namespace Core.Repository.Pessoa
 
                 foreach (DataRow row in dt.Rows)
                 {
-                    Model.Pessoa.Pessoa pessoa = new Model.Pessoa.Pessoa()
+                    Model.Pessoa.PessoaModel pessoa = new Model.Pessoa.PessoaModel()
                     {
                         Id = Convert.ToInt32(row.ItemArray[0]),
                         Codigo = row.ItemArray[1].ToString(),
@@ -189,7 +189,7 @@ namespace Core.Repository.Pessoa
             }
         }
 
-        public void Remove(Model.Pessoa.Pessoa item)
+        public void Remove(Model.Pessoa.PessoaModel item)
         {
             SqlConnection connection = new SqlConnection();
 

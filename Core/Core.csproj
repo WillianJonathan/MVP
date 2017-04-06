@@ -43,8 +43,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Model\Operacao\Operacao.cs" />
     <Compile Include="Model\Operacao\OperacaoItem.cs" />
-    <Compile Include="Model\Pessoa\Pessoa.cs" />
+    <Compile Include="Model\Pessoa\PessoaModel.cs" />
     <Compile Include="Model\Produto\Produto.cs" />
+    <Compile Include="Presenter\PessoaPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Pessoa\IPessoaRepository.cs" />
     <Compile Include="Repository\Base\IRepository.cs" />

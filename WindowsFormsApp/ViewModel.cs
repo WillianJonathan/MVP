@@ -15,15 +15,15 @@ namespace WindowsFormsApp
     {
         public ViewModel()
         {
-            Pessoa = new Pessoa();
-            Pessoas = new BindingList<Pessoa>();
-            Pessoas.Add(new Pessoa() { Id = 1, Codigo = "123", NomeRazaoSocial = "Joao" });
-            Pessoas.Add(new Pessoa() { Id = 2, Codigo = "1234", NomeRazaoSocial = "Pedro" });
+            Pessoa = new PessoaModel();
+            Pessoas = new BindingList<PessoaModel>();
+            Pessoas.Add(new PessoaModel() { Id = 1, Codigo = "123", NomeRazaoSocial = "Joao" });
+            Pessoas.Add(new PessoaModel() { Id = 2, Codigo = "1234", NomeRazaoSocial = "Pedro" });
         }
 
-        public Pessoa Pessoa { get; set; }
-        private BindingList<Pessoa> _pessoas;
-        public BindingList<Pessoa> Pessoas
+        public PessoaModel Pessoa { get; set; }
+        private BindingList<PessoaModel> _pessoas;
+        public BindingList<PessoaModel> Pessoas
         {
             get { return _pessoas; }
             set
@@ -48,7 +48,7 @@ namespace WindowsFormsApp
                 Pessoas.Add(Pessoa);
             }
 
-            Pessoa = new Pessoa();
+            Pessoa = new PessoaModel();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
